@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrottarossaLib</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-600 text-white p-4">
+    <div class="flex justify-between items-center">
+      <a href="#" class="text-xl font-bold">GrottarossaLib</a>
+      <div class="space-x-4">
+        <a href="login.html" class="hover:text-gray-300">Login</a>
+        <a href="catalogo.html" class="hover:text-gray-300">Catalogo</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Pagina di Login -->
+  <div class="min-h-screen flex items-center justify-center bg-gray-200">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+      <h2 class="text-2xl font-bold text-center mb-6">Accedi a GrottarossaLib</h2>
+      <form action="#" method="POST">
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-md" placeholder="Inserisci la tua email" required>
+        </div>
+        <div class="mb-6">
+          <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+          <input type="password" id="password" name="password" class="w-full p-3 border border-gray-300 rounded-md" placeholder="Inserisci la tua password" required>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700">Accedi</button>
+      </form>
+      <div class="mt-4 text-center">
+        <a href="registrazione.html" class="text-blue-600">Non hai un account? Registrati</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dashboard Utente -->
+  <div class="min-h-screen bg-gray-200">
+    <div class="flex">
+      <!-- Sidebar -->
+      <div class="w-64 bg-blue-600 text-white p-4">
+        <h3 class="text-xl font-bold mb-6">Dashboard</h3>
+        <ul>
+          <li><a href="prestiti.html" class="block py-2 px-4 hover:bg-blue-500">Prestiti</a></li>
+          <li><a href="catalogo.html" class="block py-2 px-4 hover:bg-blue-500">Catalogo</a></li>
+          <li><a href="notifiche.html" class="block py-2 px-4 hover:bg-blue-500">Notifiche</a></li>
+        </ul>
+      </div>
+
+      <!-- Contenuto della Dashboard -->
+      <div class="flex-1 p-8">
+        <h2 class="text-2xl font-bold mb-4">Benvenuto, [Nome Utente]</h2>
+
+        <div class="grid grid-cols-3 gap-6">
+          <!-- Widget Prestiti -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-4">Prestiti Attivi</h3>
+            <ul>
+              <li class="mb-2">Libro 1 - Scadenza: 10/12/2024</li>
+              <li class="mb-2">Libro 2 - Scadenza: 15/12/2024</li>
+            </ul>
+          </div>
+
+          <!-- Widget Raccomandazioni -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-4">Raccomandazioni</h3>
+            <ul>
+              <li class="mb-2">Libro Consigliato 1</li>
+              <li class="mb-2">Libro Consigliato 2</li>
+            </ul>
+          </div>
+
+          <!-- Widget Notifiche -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-4">Notifiche</h3>
+            <ul>
+              <li class="mb-2">Notifica 1 - Prestito scaduto</li>
+              <li class="mb-2">Notifica 2 - Nuova raccomandazione disponibile</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Catalogo Libri -->
+  <div class="min-h-screen bg-gray-100 py-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-8">Catalogo Libri</h2>
+
+      <div class="mb-6">
+        <label for="search" class="text-sm font-medium text-gray-700">Cerca un libro:</label>
+        <input type="text" id="search" name="search" class="w-full p-3 border border-gray-300 rounded-md" placeholder="Cerca per titolo, autore..." />
+      </div>
+
+      <div class="grid grid-cols-3 gap-6">
+        <!-- Libro 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <img src="book1.jpg" alt="Libro 1" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-xl font-semibold">Titolo Libro 1</h3>
+          <p class="text-gray-600">Autore: Autore 1</p>
+          <button class="w-full mt-4 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">Richiedi Prestito</button>
+        </div>
+
+        <!-- Libro 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <img src="book2.jpg" alt="Libro 2" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-xl font-semibold">Titolo Libro 2</h3>
+          <p class="text-gray-600">Autore: Autore 2</p>
+          <button class="w-full mt-4 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">Richiedi Prestito</button>
+        </div>
+
+        <!-- Libro 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <img src="book3.jpg" alt="Libro 3" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-xl font-semibold">Titolo Libro 3</h3>
+          <p class="text-gray-600">Autore: Autore 3</p>
+          <button class="w-full mt-4 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">Richiedi Prestito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white p-4 text-center">
+    <p>&copy; 2024 GrottarossaLib. Tutti i diritti riservati.</p>
+  </footer>
+
+</body>
+</html>
